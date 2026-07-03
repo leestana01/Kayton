@@ -29,14 +29,15 @@ python3 -m http.server 8000
 
 ## 🚀 배포 (GitHub Pages)
 
-`.github/workflows/deploy.yml` 워크플로가 푸시 시 자동으로 GitHub Pages에 배포합니다.
+`.github/workflows/deploy.yml` 워크플로가 게임 브랜치에 푸시될 때마다
+사이트 내용을 `gh-pages` 브랜치로 동기화합니다. GitHub은 `gh-pages` 브랜치를
+자동으로 게시하므로 별도 설정이 필요 없습니다.
 
-처음 한 번만 저장소 설정을 확인하세요:
+배포가 완료되면 `https://<사용자명>.github.io/<저장소명>/` 에서 게임이 열립니다.
+(예: https://leestana01.github.io/Kayton/)
 
-1. **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 설정
-   (워크플로가 자동으로 활성화를 시도하지만, 조직 정책에 따라 수동 설정이 필요할 수 있습니다)
-2. 브랜치에 푸시하면 Actions 탭에서 배포가 실행되고, 완료 후
-   `https://<사용자명>.github.io/<저장소명>/` 에서 게임이 열립니다.
+만약 게시되지 않는다면 **Settings → Pages → Build and deployment**에서
+Source가 **Deploy from a branch / gh-pages**로 되어 있는지 확인하세요.
 
 ## 📁 구조
 
